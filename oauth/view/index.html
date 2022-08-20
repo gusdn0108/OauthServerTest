@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <form id="login" action="http://localhost:8000/api/Oauth/authorize" , method="POST">
+        <h3>아이디</h3>
+        <input type="text" id="userid" name="id">
+        <h3>비밀번호</h3>
+        <input type="password" id="password" name="pw">
+
+        <input type="submit">카카오버튼 ㅎㅎ</input>
+    </form>
+</body>
+
+<script>
+
+    const frm = document.querySelector('#login')
+    frm.addEventListener('submit', async (e) => {
+        e.preventDefault()
+        const body = {
+            userId: e.target.id.value,
+            userPw: e.target.pw.value
+        }
+
+        const result = await axios.post('http://localhost:8000/api/Oauth/authorize', body)
+
+    })
+
+    // const url = location.href;
+    // loginForm.action = url
+    // console.log(url)
+
+
+
+
+</script>
+
+</html>
