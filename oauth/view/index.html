@@ -16,11 +16,15 @@
         <h3>비밀번호</h3>
         <input type="password" id="password" name="pw">
 
-        <input type="submit">카카오버튼 ㅎㅎ</input>
+        <input type="submit" >하잉</input>
     </form>
 </body>
 
 <script>
+
+
+    
+
 
     const frm = document.querySelector('#login')
     frm.addEventListener('submit', async (e) => {
@@ -33,11 +37,6 @@
         const result = await axios.post('http://localhost:8000/api/Oauth/authorize', body)
 
     })
-
-    // const url = location.href;
-    // loginForm.action = url
-    // console.log(url)
-
 
 
 
